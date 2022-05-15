@@ -1,6 +1,6 @@
 import { useInfiniteQuery } from "react-query";
 
-const useFeed = (path = "feed") => {
+const useDashboard = (path = "dashboard") => {
   return useInfiniteQuery(
     `${path}`,
     async ({ pageParam = 0 }) => {
@@ -18,9 +18,9 @@ const useFeed = (path = "feed") => {
     {
       refetchInterval: 1000 * 10,
       getNextPageParam: lastPage =>
-        lastPage.posts.length >= 5 ? lastPage.cursor : undefined,
+        lastPage.boards.length >= 5 ? lastPage.cursor : undefined,
     }
   );
 };
 
-export default useFeed;
+export default useDashboard;

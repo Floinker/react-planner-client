@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const PostModal = styled.div`
+const BoardModal = styled.div`
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -9,7 +9,7 @@ const PostModal = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export const PostModalForm = styled.form`
+export const BoardModalForm = styled.form`
   width: 90%;
   max-width: 500px;
   height: 50%;
@@ -23,6 +23,18 @@ export const PostModalForm = styled.form`
     width: 90%;
     max-width: 400px;
     height: 50%;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    resize: none;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+  }
+  & > input {
+    width: 90%;
+    max-width: 400px;
+    height: 10%;
     outline: 0;
     border: 0;
     border-radius: 5px;
@@ -48,9 +60,9 @@ export const PostModalForm = styled.form`
     }
   }
 `;
-export const PostModalHeader = styled.div``;
+export const BoardModalHeader = styled.div``;
 
-export const PostModalButton = styled.i`
+export const BoardModalButton = styled.i`
   z-index: 2;
   margin-top: auto;
   margin-inline: auto;
@@ -73,4 +85,4 @@ export const PostModalButton = styled.i`
   }
 `;
 
-export default PostModal;
+export default BoardModal;
