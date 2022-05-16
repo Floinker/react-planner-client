@@ -1,5 +1,4 @@
 import useDashboard from "./hooks/useDashboard";
-import Post from "./BoardItem";
 import StyledDashboard, { CreateBoardButton, LoadMoreButton } from "./styled/Dashboard.styled";
 import React from "react";
 import { useState } from "react";
@@ -19,7 +18,7 @@ const Dashboard = () => {
   return (
     <StyledDashboard>
       <h1>My Boards</h1>
-      {data?.pages?.map(page => page.boards.map(board => <BoardItem board={board} />))}
+      {data?.pages?.map(page => page.boards.map(board => <BoardItem key={board.id} board={board} />))}
       <LoadMoreButton>
         {hasNextPage && !isFetchingNextPage && (
           <button onClick={() => fetchNextPage()}>Load More</button>

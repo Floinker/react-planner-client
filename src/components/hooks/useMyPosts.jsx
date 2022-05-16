@@ -1,11 +1,11 @@
 import { useInfiniteQuery } from "react-query";
 
 const useMyPosts = () => {
-    return useInfiniteQuery("my_posts", async({pageParam = 0}) => {
+    return useInfiniteQuery("my_posts", async ({ pageParam = 0 }) => {
         const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/my_posts?curosor=${pageParam}`, {
             credentials: "include"
         });
-        if(!res.ok){
+        if (!res.ok) {
             throw new Error("something went wrong serer-side")
         }
         return res.json();
