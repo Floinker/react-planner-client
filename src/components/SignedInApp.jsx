@@ -5,10 +5,10 @@ import Account from './Account'
 import Dashboard from './Dashboard'
 import Nav from './Nav'
 import { QueryClientProvider, QueryClient } from "react-query"
-import { useHistory } from "react-router-dom";
+
 
 import StyledSignedInApp from './styled/SignedInApp.styled'
-import Board from './Board'
+import Board from './board/Board'
 
 const queryClient = new QueryClient();
 

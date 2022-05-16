@@ -11,7 +11,7 @@ const Signup = () => {
     <StyledSignup>
         <form onSubmit={Signin}>
             <div>
-                <h1>Social Media Full Stack</h1>
+                <h1>Full Stack Planner</h1>
                 <sub>Created by Timo S.</sub>
             </div>
             <SignupButton ><p>Sign in with Google</p> <i className='fa-brands fa-google'/></SignupButton>
